@@ -30,6 +30,15 @@ describe('Validation', () => {
 
 	})
 
+	test("returnerar true för ett giltigt cart item", () => {
+		const result = isCartItem(exampleCartObject)
+
+		expect(result).toBe(true)
+
+	})
+
+
+
 
 
 
