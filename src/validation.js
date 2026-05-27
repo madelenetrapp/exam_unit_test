@@ -5,9 +5,18 @@
 // 4. refactor as neccessary before you move on to the next
 // 5. repeat
 
-function isCartItem(maybeCartItem) {}
+function isCartItem(maybeCartItem) { }
 
-function isProduct(maybeProduct) {}
+function isProduct(maybeProduct) {
+  if (
+    maybeProduct.id !== undefined &&
+    maybeProduct.name !== undefined &&
+    maybeProduct.price !== undefined
+  ) {
+    return true
+  }
+  return false
+}
 
 
 export { isCartItem, isProduct }
