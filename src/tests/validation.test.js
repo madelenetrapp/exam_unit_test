@@ -16,7 +16,6 @@ const exampleCartObject = {
 describe('Validation', () => {
 
 	// Använd en "test" eller "it" (de är synonymer) för varje testfall
-describe('Validation', () => {
 
 	test("returnerar true för giltig product", () => {
 		const result = isProduct(exampleProduct)
@@ -24,7 +23,15 @@ describe('Validation', () => {
 		expect(result).toBe(true)
 	})
 
-})
+	test("returnerar false för ogiltig product", () => {
+		const result = isProduct({})
+
+		expect(result).toBe(false)
+
+	})
+
+
+
 
 
 
