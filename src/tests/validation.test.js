@@ -16,12 +16,16 @@ const exampleCartObject = {
 describe('Validation', () => {
 
 	// Använd en "test" eller "it" (de är synonymer) för varje testfall
-	/* Exempel på syntax:
-	test('beskriv testfallet', () => {
-		// här skriver du testkoden
-		// avsluta alltid med "expect"
+describe('Validation', () => {
+
+	test("returnerar true för giltig product", () => {
+		const result = isProduct(exampleProduct)
+
+		expect(result).toBe(true)
 	})
-	*/
+
+})
+
 
 
 	// ---------------------------------------------

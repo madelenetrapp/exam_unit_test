@@ -25,6 +25,5 @@ describe('Cart', () => {
 		expect(itemCountAfter).toBe(itemCountBefore + 1)
 	})
 
-
 	// -------------------------------------------------- //
 })
