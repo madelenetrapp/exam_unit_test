@@ -37,6 +37,12 @@ describe('Validation', () => {
 
 	})
 
+	test("returnerar false för ett ogiltigt cart item", () => {
+		const result= isCartItem({})
+
+		expect(result).toBe(false)
+	})
+
 
 
 
