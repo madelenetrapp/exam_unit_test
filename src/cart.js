@@ -30,7 +30,7 @@ let idCounter = 2002
 
 
 function getCartItemCount() {
-	throw new Error('Not implemented yet')
+	return cart.length
 }
 
 
@@ -57,7 +57,7 @@ function addToCart(newItem) {
 
 
 function clearCart() {
-	throw new Error('Not implemented yet')
+	cart = []
 }
 
 
