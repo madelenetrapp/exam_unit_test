@@ -11,6 +11,11 @@ describe('Cart', () => {
 
 	// -------------------------------------------------- //
 	// Skriv dina testfall här
+	test("addToCart returnerar false för ogiltig product", () => {
+		const result = addToCart({})
+
+		expect(result).toBe(false)
+	})
 
 	// Du får ett test att börja med
 	test('addToCart lägger till en ny produkt i kundvagnen', () => {
