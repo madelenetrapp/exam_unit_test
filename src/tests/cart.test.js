@@ -28,7 +28,7 @@ test("getItem returnerar rätt cart item", () => {
 })
 
 	// Du får ett test att börja med
-	test('addToCart lägger till en ny produkt i kundvagnen', () => {
+	test("addToCart lägger till en ny produkt i kundvagnen", () => {
 		const itemCountBefore = getCartItemCount()
 		const input = { id: 1002, name: 'Vattenpistol', price: 40 }
 
@@ -38,6 +38,17 @@ test("getItem returnerar rätt cart item", () => {
 		const itemCountAfter = getCartItemCount()
 
 		expect(itemCountAfter).toBe(itemCountBefore + 1)
+	})
+
+	test("addCrat ökar amount om samma produkt läggs till igen", () => {
+		const input = { id: 1002, name: 'Vattenpistol', price: 40 }
+
+		addToCart(input)
+		addToCart(input)
+
+		const result = getItem(0)
+
+		expect(result.amount).toBe(2)
 	})
 
 	// -------------------------------------------------- //
