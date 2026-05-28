@@ -60,6 +60,9 @@ function clearCart() {
 	cart = []
 }
 
+function getItem(index) {
+	return cart[index]
+}
 
 
-export { getCartItemCount, addToCart, clearCart }
+export { getCartItemCount, addToCart, clearCart, getItem }
