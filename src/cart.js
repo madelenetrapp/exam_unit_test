@@ -73,5 +73,11 @@ function removeFromCart(itemId) {
     cart = cart.filter(cartItem => cartItem.id !== itemId)
 }
 
+function editCart(itemId, newValues) {
+	const index = cart.findIndex(cartItem => cartItem.id === itemId)
 
-export { getCartItemCount, addToCart, clearCart, getItem, getTotalCartValue, removeFromCart }
+	cart[index] = { ...cart[index], ...newValues }
+}
+
+
+export { getCartItemCount, addToCart, clearCart, getItem, getTotalCartValue, removeFromCart, editCart }
