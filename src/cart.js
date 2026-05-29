@@ -64,5 +64,10 @@ function getItem(index) {
 	return cart[index]
 }
 
+function getTotalCartValue() {
+	return cart.reduce((total, cartItem) =>
+	total + cartItem.item.price* cartItem.amount, 0)
+}
 
-export { getCartItemCount, addToCart, clearCart, getItem }
+
+export { getCartItemCount, addToCart, clearCart, getItem, getTotalCartValue }
