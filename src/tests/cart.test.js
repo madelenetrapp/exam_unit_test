@@ -70,7 +70,7 @@ test("getItem returnerar rätt cart item", () => {
 
 		removeFromCart(cartItem.id)
 
-		const result = getCartItemConunt()
+		const result = getCartItemCount()
 
 		expect(result).toBe(0)
 	})

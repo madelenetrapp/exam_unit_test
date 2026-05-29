@@ -69,5 +69,9 @@ function getTotalCartValue() {
 	total + cartItem.item.price* cartItem.amount, 0)
 }
 
+function removeFromCart(itemId) {
+    cart = cart.filter(cartItem => cartItem.id !== itemId)
+}
 
-export { getCartItemCount, addToCart, clearCart, getItem, getTotalCartValue }
+
+export { getCartItemCount, addToCart, clearCart, getItem, getTotalCartValue, removeFromCart }
