@@ -75,6 +75,17 @@ test("getItem returnerar rätt cart item", () => {
 		expect(result).toBe(0)
 	})
 
+		test("clearCart tömmer kundvagnen", () => {
+		const input = { id:1, name: "Vattenpistol", proce: 40 }
+
+		addToCart(input)
+		clearCart()
+
+		const result = getCartItemCount()
+
+		expect(result).toBe(0)
+	})
+
 	test("editCart ändrar amount på en produkt", () => {
 		const input = {id: 1, name: "vattenpistol", price: 40}
 
@@ -88,6 +99,8 @@ test("getItem returnerar rätt cart item", () => {
 
 		expect(result.amount).toBe(3)
 	})
+
+
 
 	// -------------------------------------------------- //
 })

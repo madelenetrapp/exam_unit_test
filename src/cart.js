@@ -57,7 +57,7 @@ function addToCart(newItem) {
 
 
 function clearCart() {
-	cart = []
+	// cart = []
 }
 
 function getItem(index) {
